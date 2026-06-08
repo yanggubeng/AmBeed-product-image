@@ -1,4 +1,4 @@
-import { FROZEN_TEMPLATE_PARAMS } from "./frozen-template-params.js?v=20260608-pasted-params-4";
+import { FROZEN_TEMPLATE_PARAMS } from "./frozen-template-params.js?v=20260608-pasted-params-5";
 
 const CANVAS_WIDTH = 1448;
 const CANVAS_HEIGHT = 1086;
@@ -10,7 +10,7 @@ const DEBUG_STORAGE_KEY = "ambeed-label-debug-config-v1";
 const PRODUCTION_STORAGE_KEY = "ambeed-label-production-config-v1";
 const DELETED_TEMPLATE_IDS_KEY = "ambeed-label-deleted-template-ids-v1";
 const FROZEN_TEMPLATE_VERSION_KEY = "ambeed-label-frozen-template-version-v1";
-const FROZEN_TEMPLATE_PARAMS_VERSION = "2026-06-08-pasted-params-4";
+const FROZEN_TEMPLATE_PARAMS_VERSION = "2026-06-08-pasted-params-5";
 const DEBUG_PASSWORD = "0000";
 const MIN_BOX_SIZE = 20;
 const HANDLE_SIZE = 7;

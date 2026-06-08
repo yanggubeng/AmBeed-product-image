@@ -1,6 +1,7 @@
 export const FROZEN_TEMPLATE_PARAMS = [
   {
     "id": "HC00418",
+    "image": "./包装模板图/HC00418.png?v=20260608-hc00418-image-1",
     "labelArea": {
       "x": 559,
       "y": 422,
@@ -33,58 +34,58 @@ export const FROZEN_TEMPLATE_PARAMS = [
     "rows": [
       {
         "key": "productName",
-        "x": 116,
-        "y": 8,
+        "x": 115,
+        "y": 19,
         "width": 342,
-        "fontSize": 23
+        "fontSize": 20
       },
       {
         "key": "chineseName",
-        "x": 116,
-        "y": 50,
+        "x": 115,
+        "y": 57,
         "width": 342,
-        "fontSize": 17
+        "fontSize": 16
       },
       {
         "key": "catNo",
-        "x": 116,
-        "y": 89,
+        "x": 115,
+        "y": 90,
         "width": 342,
         "fontSize": 12
       },
       {
         "key": "batchNo",
-        "x": 116,
-        "y": 121,
+        "x": 115,
+        "y": 122,
         "width": 342,
         "fontSize": 12
       },
       {
         "key": "storage",
-        "x": 116,
-        "y": 150,
+        "x": 115,
+        "y": 151,
         "width": 342,
         "fontSize": 12
       },
       {
         "key": "size",
-        "x": 116,
-        "y": 181,
+        "x": 115,
+        "y": 182,
         "width": 342,
         "fontSize": 12
       },
       {
         "key": "purity",
-        "x": 116,
-        "y": 212,
+        "x": 115,
+        "y": 213,
         "width": 342,
         "fontSize": 12
       }
-    ],
-    "image": "./包装模板图/HC00418.png?v=20260608-hc00418-image-1"
+    ]
   },
   {
     "id": "HC00472",
+    "image": "./包装模板图/HC00472.png",
     "labelArea": {
       "x": 444,
       "y": 344,
@@ -117,57 +118,58 @@ export const FROZEN_TEMPLATE_PARAMS = [
     "rows": [
       {
         "key": "productName",
-        "x": 230,
-        "y": 21,
+        "x": 236,
+        "y": 22,
         "width": 296,
-        "fontSize": 17
+        "fontSize": 16
       },
       {
         "key": "chineseName",
-        "x": 230,
-        "y": 57,
+        "x": 236,
+        "y": 58,
         "width": 296,
         "fontSize": 12
       },
       {
         "key": "catNo",
-        "x": 230,
-        "y": 89,
+        "x": 236,
+        "y": 91,
         "width": 296,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "batchNo",
-        "x": 230,
-        "y": 116,
+        "x": 236,
+        "y": 118,
         "width": 296,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "storage",
-        "x": 230,
-        "y": 142,
+        "x": 236,
+        "y": 144,
         "width": 296,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "size",
-        "x": 230,
-        "y": 167,
+        "x": 236,
+        "y": 169,
         "width": 296,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "purity",
-        "x": 230,
-        "y": 195,
+        "x": 236,
+        "y": 197,
         "width": 296,
-        "fontSize": 11
+        "fontSize": 10
       }
     ]
   },
   {
     "id": "HC00473",
+    "image": "./包装模板图/HC00473.png",
     "labelArea": {
       "x": 543,
       "y": 380,
@@ -200,57 +202,58 @@ export const FROZEN_TEMPLATE_PARAMS = [
     "rows": [
       {
         "key": "productName",
-        "x": 153,
-        "y": 41,
+        "x": 162,
+        "y": 46,
         "width": 348,
-        "fontSize": 17
+        "fontSize": 16
       },
       {
         "key": "chineseName",
-        "x": 153,
-        "y": 76,
+        "x": 162,
+        "y": 81,
         "width": 348,
         "fontSize": 14
       },
       {
         "key": "catNo",
-        "x": 153,
-        "y": 117,
+        "x": 162,
+        "y": 120,
         "width": 348,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "batchNo",
-        "x": 153,
-        "y": 142,
+        "x": 162,
+        "y": 145,
         "width": 348,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "storage",
-        "x": 153,
-        "y": 169,
+        "x": 162,
+        "y": 172,
         "width": 348,
-        "fontSize": 12
+        "fontSize": 10
       },
       {
         "key": "size",
-        "x": 153,
-        "y": 196,
+        "x": 162,
+        "y": 199,
         "width": 348,
-        "fontSize": 11
+        "fontSize": 10
       },
       {
         "key": "purity",
-        "x": 153,
-        "y": 224,
+        "x": 162,
+        "y": 227,
         "width": 348,
-        "fontSize": 11
+        "fontSize": 10
       }
     ]
   },
   {
     "id": "HC002",
+    "image": "./包装模板图/HC002.png",
     "labelArea": {
       "x": 530,
       "y": 374,
@@ -334,6 +337,7 @@ export const FROZEN_TEMPLATE_PARAMS = [
   },
   {
     "id": "HC005",
+    "image": "./包装模板图/HC005.png",
     "labelArea": {
       "x": 560,
       "y": 496,
@@ -417,6 +421,7 @@ export const FROZEN_TEMPLATE_PARAMS = [
   },
   {
     "id": "HC003",
+    "image": "./包装模板图/HC003.png",
     "labelArea": {
       "x": 588,
       "y": 463,
@@ -500,6 +505,7 @@ export const FROZEN_TEMPLATE_PARAMS = [
   },
   {
     "id": "HC007",
+    "image": "./包装模板图/HC007.png",
     "labelArea": {
       "x": 586,
       "y": 544,
@@ -583,6 +589,7 @@ export const FROZEN_TEMPLATE_PARAMS = [
   },
   {
     "id": "HC023",
+    "image": "./包装模板图/HC023.png",
     "labelArea": {
       "x": 653,
       "y": 533,
