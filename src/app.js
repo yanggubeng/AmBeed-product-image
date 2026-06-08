@@ -1,4 +1,4 @@
-import { FROZEN_TEMPLATE_PARAMS } from "./frozen-template-params.js";
+import { FROZEN_TEMPLATE_PARAMS } from "./frozen-template-params.js?v=20260608-pasted-params-4";
 
 const CANVAS_WIDTH = 1448;
 const CANVAS_HEIGHT = 1086;
@@ -9,6 +9,8 @@ const DEFAULT_LINE_SCALE = 0.82;
 const DEBUG_STORAGE_KEY = "ambeed-label-debug-config-v1";
 const PRODUCTION_STORAGE_KEY = "ambeed-label-production-config-v1";
 const DELETED_TEMPLATE_IDS_KEY = "ambeed-label-deleted-template-ids-v1";
+const FROZEN_TEMPLATE_VERSION_KEY = "ambeed-label-frozen-template-version-v1";
+const FROZEN_TEMPLATE_PARAMS_VERSION = "2026-06-08-pasted-params-4";
 const DEBUG_PASSWORD = "0000";
 const MIN_BOX_SIZE = 20;
 const HANDLE_SIZE = 7;
@@ -18,7 +20,7 @@ const PACKAGE_TEMPLATES = [
   {
     id: "HC00418",
     name: "HC00418 棕色冻存管 1.5ml",
-    image: "./包装模板图/HC00418.png",
+    image: "./包装模板图/HC00418.png?v=20260608-hc00418-image-1",
     spec: "1.5ml",
     material: "PP",
     labelArea: { x: 668, y: 438, width: 374, height: 253 },
@@ -498,6 +500,33 @@ function clonePlain(value) {
   return JSON.parse(JSON.stringify(value));
 }
 
+function upsertFrozenParamsIntoStorage(storageKey) {
+  const configs = readStoredConfigs(storageKey);
+  for (const frozenTemplate of FROZEN_TEMPLATE_PARAMS) {
+    const frozenConfig = clonePlain(frozenTemplate);
+    const existingIndex = configs.findIndex((template) => template.id === frozenConfig.id);
+    if (existingIndex >= 0) {
+      configs[existingIndex] = {
+        ...configs[existingIndex],
+        ...frozenConfig,
+      };
+    } else {
+      configs.push(frozenConfig);
+    }
+  }
+  return writeStoredConfigs(storageKey, configs);
+}
+
+function syncFrozenParamsToStoredConfigs() {
+  const savedVersion = window.localStorage.getItem(FROZEN_TEMPLATE_VERSION_KEY);
+  if (savedVersion === FROZEN_TEMPLATE_PARAMS_VERSION) return;
+  const productionSaved = upsertFrozenParamsIntoStorage(PRODUCTION_STORAGE_KEY);
+  const debugSaved = upsertFrozenParamsIntoStorage(DEBUG_STORAGE_KEY);
+  if (productionSaved && debugSaved) {
+    window.localStorage.setItem(FROZEN_TEMPLATE_VERSION_KEY, FROZEN_TEMPLATE_PARAMS_VERSION);
+  }
+}
+
 function mergeTemplateParams(targetTemplates, savedTemplates) {
   if (!Array.isArray(savedTemplates)) return;
   for (const savedTemplate of savedTemplates) {
@@ -845,7 +874,7 @@ async function replaceCurrentTemplateImage() {
     renderPackagePicker();
     renderPreview();
     elements.replaceTemplateImage.value = "";
-    setTemplateManageStatus(`已替换 ${template.name} 的背景图。需要进入使用模式时请点击“固化到使用模式”。`);
+    setTemplateManageStatus(`已替换 ${template.name} 的模板图。需要进入使用模式时请点击“固化到使用模式”。`);
   } catch (error) {
     setTemplateManageStatus(error.message);
   }
@@ -2133,6 +2162,7 @@ function bindEvents() {
 async function init() {
   await loadTestData();
   applyInitialQueryParams();
+  syncFrozenParamsToStoredConfigs();
   reloadTemplatesForCurrentMode();
   fillSelects();
   buildFieldForm();
